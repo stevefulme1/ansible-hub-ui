@@ -32,3 +32,25 @@ test/cypress/fixtures/example.json
 
 # pycache files
 *pyc
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+vault_pass*
+*vault*.yml
+credentials*
+
+# Ansible
+*.retry
+collections/
+
+# Python
+.venv/
+venv/
+
+# Logs
+*.log
