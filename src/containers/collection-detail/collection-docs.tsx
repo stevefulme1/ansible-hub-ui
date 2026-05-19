@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import { t } from '@lingui/core/macro';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
 import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
@@ -169,7 +170,7 @@ class CollectionDocs extends Component<RouteProps, IBaseCollectionState> {
                   // if displayHTML is set, render it
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: displayHTML,
+                      __html: DOMPurify.sanitize(displayHTML),
                     }}
                   />
                 ) : (

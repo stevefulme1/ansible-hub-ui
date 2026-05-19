@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import { type HTMLAttributes } from 'react';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
@@ -5,7 +6,7 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const HTMLComment = ({ text, ...props }: IProps) => (
-  <div {...props} dangerouslySetInnerHTML={{ __html: `<!-- ${text} -->` }} />
+  <div {...props} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(`<!-- ${text} -->`) }} />
 );
 
 export const UIVersion = () => (

@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import { t } from '@lingui/core/macro';
 import { Trans } from '@lingui/react/macro';
 import {
@@ -102,7 +103,7 @@ class RoleDocs extends Component<RoleMetaProps, RoleMetaReadmeState> {
       <div>
         <div
           className='pf-v5-c-content'
-          dangerouslySetInnerHTML={{ __html: this.state.readme_html }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(this.state.readme_html) }}
         />
       </div>
     );

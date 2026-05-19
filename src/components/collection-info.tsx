@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import { t } from '@lingui/core/macro';
 import { Trans } from '@lingui/react/macro';
 import {
@@ -179,7 +180,7 @@ export const CollectionInfo = ({
               <div
                 className='pf-v5-c-content'
                 dangerouslySetInnerHTML={{
-                  __html: content?.docs_blob?.collection_readme.html,
+                  __html: DOMPurify.sanitize(content?.docs_blob?.collection_readme.html),
                 }}
               />
               <div className='hub-fade-out' />
