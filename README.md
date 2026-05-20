@@ -117,3 +117,11 @@ To map between the two:
 |2.5|4.10|
 
 [Table with component versions](https://github.com/ansible/galaxy_ng/wiki/Galaxy-NG-Version-Matrix)
+
+## Community
+
+- [Contributing](CONTRIBUTING.md) - How to contribute to this project
+- [Code of Conduct](CODE_OF_CONDUCT.md) - Ansible Community Code of Conduct
+- [Security Policy](SECURITY.md) - How to report security vulnerabilities
+- [License](COPYING) - GPL-3.0
+
